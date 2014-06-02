@@ -107,6 +107,7 @@
 		275F478B193C7EB900F6B2A6 /* Icon-iPhone-Small-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 275F4783193C7EB900F6B2A6 /* Icon-iPhone-Small-40@2x.png */; };
 		275F478C193C7EB900F6B2A6 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 275F4784193C7EB900F6B2A6 /* icon.png */; };
 		275F478D193C7EB900F6B2A6 /* splashscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 275F4785193C7EB900F6B2A6 /* splashscreen.png */; };
+		275F4791193CBF2000F6B2A6 /* hue.wav in Resources */ = {isa = PBXBuildFile; fileRef = 275F4790193CBF2000F6B2A6 /* hue.wav */; };
 		276BD50B18CB84380035A90F /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 276BD50818CB84380035A90F /* Icon-60@2x.png */; };
 		276BD50C18CB84380035A90F /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 276BD50918CB84380035A90F /* Icon-Small.png */; };
 		276BD50D18CB84380035A90F /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 276BD50A18CB84380035A90F /* Icon-Small@2x.png */; };
@@ -260,6 +261,7 @@
 		275F4783193C7EB900F6B2A6 /* Icon-iPhone-Small-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-iPhone-Small-40@2x.png"; sourceTree = "<group>"; };
 		275F4784193C7EB900F6B2A6 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		275F4785193C7EB900F6B2A6 /* splashscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashscreen.png; sourceTree = "<group>"; };
+		275F4790193CBF2000F6B2A6 /* hue.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hue.wav; sourceTree = "<group>"; };
 		276BD50818CB84380035A90F /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		276BD50918CB84380035A90F /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		276BD50A18CB84380035A90F /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 				278D343F18B3BE3800EAE4E5 /* Params.m */,
 				27F7126318BC928700A4394C /* maracas0.wav */,
 				27F7126418BC928700A4394C /* maracas1.wav */,
+				275F4790193CBF2000F6B2A6 /* hue.wav */,
 				27573D24192DBA410035AA06 /* close.png */,
 				27E78C8C18B8A7D500FD3984 /* selected.png */,
 				27500AC118AB87E600703749 /* Images.xcassets */,
@@ -724,6 +727,7 @@
 				276BD50C18CB84380035A90F /* Icon-Small.png in Resources */,
 				27573D08192B17CE0035AA06 /* btn_facebook@2x.png in Resources */,
 				27573D47193162A60035AA06 /* m8_argeria@2x.png in Resources */,
+				275F4791193CBF2000F6B2A6 /* hue.wav in Resources */,
 				27573CFE192B14A10035AA06 /* m2_espagne@2x.png in Resources */,
 				27573D21192DB8530035AA06 /* 3_col@2x.png in Resources */,
 				27F7128A18BDA6B500A4394C /* bg-menuitem@2x.png in Resources */,
@@ -904,7 +908,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "F067B3F3-5763-4F7F-9FF5-A04DFBE0EA45";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -927,7 +931,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "F067B3F3-5763-4F7F-9FF5-A04DFBE0EA45";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

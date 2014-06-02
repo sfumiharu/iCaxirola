@@ -12,8 +12,7 @@
 #import "Params.h"
 #import "GADBannerView.h"
 #import "UIView+iCaxirola.h"
+#import <AVFoundation/AVAudioPlayer.h>
 
 @interface ViewController : UIViewController
-@property (nonatomic, strong) IBOutlet UIImageView *mainCaxirola;
-@property (nonatomic, strong) NSUserDefaults *ud1;
 @end

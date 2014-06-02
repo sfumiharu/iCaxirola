@@ -21,6 +21,9 @@ typedef enum : NSUInteger {
 {
     AVAudioPlayer *SoundAudio0;
     AVAudioPlayer *SoundAudio1;
+    AVAudioPlayer *SoundAudio2;
+    AVAudioPlayer *SoundAudio3;
+    AVAudioPlayer *SoundAudio4;
     SystemSoundID soundSystem;
     UIButton *flagSelectBtn;
     UIButton *pressCloseFLW;
@@ -37,7 +40,8 @@ typedef enum : NSUInteger {
     UIImageView *facebook;
     UIImageView *twitter;
 }
-
+@property (nonatomic, strong) IBOutlet UIImageView *mainCaxirola;
+@property (nonatomic, strong) NSUserDefaults *ud1;
 @property (strong, nonatomic) IBOutlet UIWebView *WebView;
 @property (strong, nonatomic) UIImageView *menuu;
 @end
@@ -62,28 +66,14 @@ typedef enum : NSUInteger {
     [UIApplication sharedApplication].statusBarHidden = YES;
 //    _mainCaxirola = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     
-    
     _mainCaxirola.image = [UIImage imageNamed:@"m1_brazil@2x.png"];
     _mainCaxirola.backgroundColor = RGB(255, 217, 64);
-    
-    NSURL *url1 = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"maracas0" ofType:@"wav"]];
-    SoundAudio0 = [[AVAudioPlayer alloc] initWithContentsOfURL:url1 error:nil];
-    [SoundAudio0 prepareToPlay];
-
-    NSURL *url2 = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"maracas1" ofType:@"wav"]];
-    SoundAudio1 = [[AVAudioPlayer alloc] initWithContentsOfURL:url2 error:nil];
-    [SoundAudio1 prepareToPlay];
     
     [_mainCaxirola addSubview:[self plus]];
     [_mainCaxirola addSubview:[self menu]];
     [_mainCaxirola addSubview:[self facebook]];
     [_mainCaxirola addSubview:[self twitter]];
 
-    
-    
-    //SounSystemIDの準備
-    //    NSURL *url2 = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"beam" ofType:@"wav"]];
-    //    AudioServicesCreateSystemSoundID((__bridge CFURLRef)url2, &soundSystem);
 }
 
 -(BOOL)prefersStatusBarHidden{
@@ -131,7 +121,7 @@ typedef enum : NSUInteger {
                           kESP, kNED, kCHI, kAUS,
                           kCOL, kGRE, kCIV, kJPN,
                           kURU, kCRC, kENG, kITA,
-                          kSUI, kECU, kFRA, kHON,
+                          kSUI, kECU, kFRA,
                           kARG, kBIH, kIRN, kNGA,
                           kGRE, kPOR, kGHA, kUSA,
                           kBEL, kALG, kRUS, kKOR, nil];
@@ -139,7 +129,7 @@ typedef enum : NSUInteger {
                           k_ESP, k_NED, k_CHI, k_AUS,
                           k_COL, k_GRE, k_CIV, k_JPN,
                           k_URU, k_CRC, k_ENG, k_ITA,
-                          k_SUI, k_ECU, k_FRA, k_HON,
+                          k_SUI, k_ECU, k_FRA,
                           k_ARG, k_BIH, k_IRN, k_NGA,
                           k_GRE, k_POR, k_GHA, k_USA,
                           k_BEL, k_ALG, k_RUS, k_KOR, nil];
@@ -147,11 +137,11 @@ typedef enum : NSUInteger {
                          kE_ESP, kE_NED, kE_CHI, kE_AUS,
                          kE_COL, kE_GRE, kE_CIV, kE_JPN,
                          kE_URU, kE_CRC, kE_ENG, kE_ITA,
-                         kE_SUI, kE_ECU, kE_FRA, kE_HON,
+                         kE_SUI, kE_ECU, kE_FRA,
                          kE_ARG, kE_BIH, kE_IRN, kE_NGA,
                          kE_GRE, kE_POR, kE_GHA, kE_USA,
                          kE_BEL, kE_ALG, kE_RUS, kE_KOR, nil];
-            flagKeys = [NSArray arrayWithObjects:@"0", @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11", @"12", @"13", @"14", @"15", @"16", @"17", @"18", @"19", @"20", @"21", @"22", @"23", @"24", @"25", @"26", @"27", @"28", @"29", @"30", @"31", nil];
+            flagKeys = [NSArray arrayWithObjects:@"0", @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11", @"12", @"13", @"14", @"15", @"16", @"17", @"19", @"20", @"21", @"22", @"23", @"24", @"25", @"26", @"27", @"28", @"29", @"30", @"31", nil];
             
             
             //    ボタンの配置
@@ -263,19 +253,82 @@ typedef enum : NSUInteger {
     [super didReceiveMemoryWarning];
 }
 
+-(void)setAudio00{
+    NSURL *url1 = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"maracas0" ofType:@"wav"]];
+    SoundAudio0 = [[AVAudioPlayer alloc] initWithContentsOfURL:url1 error:nil];
+    [SoundAudio0 prepareToPlay];
+}
+-(void)setAudio01{
+    NSURL *url1 = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"maracas0" ofType:@"wav"]];
+    SoundAudio2 = [[AVAudioPlayer alloc] initWithContentsOfURL:url1 error:nil];
+    [SoundAudio2 prepareToPlay];
+}
+
+-(void)setAudio10{
+    NSURL *url2 = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"maracas1" ofType:@"wav"]];
+    SoundAudio1 = [[AVAudioPlayer alloc] initWithContentsOfURL:url2 error:nil];
+    [SoundAudio1 prepareToPlay];
+
+}
+-(void)setAudio11{
+    NSURL *url2 = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"maracas1" ofType:@"wav"]];
+    SoundAudio3 = [[AVAudioPlayer alloc] initWithContentsOfURL:url2 error:nil];
+    [SoundAudio3 prepareToPlay];
+    
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self setAudio00];
+    [SoundAudio0 play];
+    [self setAudio01];
+    [SoundAudio2 play];
+    [self setAudio10];
+    [SoundAudio1 play];
+    [self setAudio11];
+    [SoundAudio3 play];
+}
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-//-(void)swipeGesture:(UITapGestureRecognizer*)sender
 {
+    [self setAudio00];
     [SoundAudio0 play];
+    [self setAudio01];
+    [SoundAudio2 play];
+    [self setAudio10];
     [SoundAudio1 play];
+    [self setAudio11];
+    [SoundAudio3 play];
 }
-
--(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    [self setAudio00];
     [SoundAudio0 play];
+    [self setAudio01];
+    [SoundAudio2 play];
+    [self setAudio10];
     [SoundAudio1 play];
+    [self setAudio11];
+    [SoundAudio3 play];
 }
-
-
+-(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    [self setAudio00];
+    [SoundAudio0 play];
+    [self setAudio01];
+    [SoundAudio2 play];
+    [self setAudio10];
+    [SoundAudio1 play];
+    [self setAudio11];
+    [SoundAudio3 play];
+}
+-(void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    [self setAudio00];
+    [SoundAudio0 play];
+    [self setAudio01];
+    [SoundAudio2 play];
+    [self setAudio10];
+    [SoundAudio1 play];
+    [self setAudio11];
+    [SoundAudio3 play];
+}
 - (void)openMenuButtonFadeIn
 {
     if (menu.alpha == 1) {
