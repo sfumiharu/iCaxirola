@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		271DE35818B64BF200226209 /* UIView+iCaxirola.m in Sources */ = {isa = PBXBuildFile; fileRef = 271DE35718B64BF200226209 /* UIView+iCaxirola.m */; };
 		27500AAA18AB87E600703749 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27500AA918AB87E600703749 /* Foundation.framework */; };
 		27500AAC18AB87E600703749 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27500AAB18AB87E600703749 /* CoreGraphics.framework */; };
 		27500AAE18AB87E600703749 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27500AAD18AB87E600703749 /* UIKit.framework */; };
@@ -146,8 +145,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		271DE35618B64BF200226209 /* UIView+iCaxirola.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+iCaxirola.h"; sourceTree = "<group>"; };
-		271DE35718B64BF200226209 /* UIView+iCaxirola.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+iCaxirola.m"; sourceTree = "<group>"; };
 		27500AA618AB87E600703749 /* iCaxirola.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCaxirola.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27500AA918AB87E600703749 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27500AAB18AB87E600703749 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -324,15 +321,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		271DE35518B64BD300226209 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				271DE35618B64BF200226209 /* UIView+iCaxirola.h */,
-				271DE35718B64BF200226209 /* UIView+iCaxirola.m */,
-			);
-			name = Extension;
-			sourceTree = "<group>";
-		};
 		27500A9D18AB87E600703749 = {
 			isa = PBXGroup;
 			children = (
@@ -376,7 +364,6 @@
 		27500AAF18AB87E600703749 /* iCaxirola */ = {
 			isa = PBXGroup;
 			children = (
-				271DE35518B64BD300226209 /* Extension */,
 				27500B3618B24E1000703749 /* Flagsimages */,
 				27500AB818AB87E600703749 /* AppDelegate.h */,
 				27500AB918AB87E600703749 /* AppDelegate.m */,
@@ -771,7 +758,6 @@
 				27500AC018AB87E600703749 /* ViewController.m in Sources */,
 				27500ABA18AB87E600703749 /* AppDelegate.m in Sources */,
 				27500AB618AB87E600703749 /* main.m in Sources */,
-				271DE35818B64BF200226209 /* UIView+iCaxirola.m in Sources */,
 				278D344018B3BE3800EAE4E5 /* Params.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -908,7 +894,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "F067B3F3-5763-4F7F-9FF5-A04DFBE0EA45";
+				PROVISIONING_PROFILE = "5805F5E8-06E6-40AF-816D-3DC693082C19";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -931,7 +917,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "F067B3F3-5763-4F7F-9FF5-A04DFBE0EA45";
+				PROVISIONING_PROFILE = "5805F5E8-06E6-40AF-816D-3DC693082C19";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

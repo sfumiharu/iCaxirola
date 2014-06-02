@@ -48,23 +48,10 @@ typedef enum : NSUInteger {
 
 @implementation ViewController
 
-//- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-//{
-//    CGPoint pt = [[touches anyObject] locationInView:self.view];
-//    if (CGRectContainsPoint(CGRectMake(_mainCaxirola.frame.origin.x, _mainCaxirola.frame.origin.y, _mainCaxirola.frame.size.width,_mainCaxirola.frame.size.height),pt)) {
-//        NSLog(@"あたり");
-//        UITouch *touch = [touches anyObject];
-//        CGPoint touchPos = [touch locationInView:_mainCaxirola];
-//        _mainCaxirola.center = touchPos;
-//        NSLog(@"%f, %f", touchPos.x, touchPos.y);
-//    }
-//}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [UIApplication sharedApplication].statusBarHidden = YES;
-//    _mainCaxirola = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     
     _mainCaxirola.image = [UIImage imageNamed:@"m1_brazil@2x.png"];
     _mainCaxirola.backgroundColor = RGB(255, 217, 64);
@@ -73,12 +60,12 @@ typedef enum : NSUInteger {
     [_mainCaxirola addSubview:[self menu]];
     [_mainCaxirola addSubview:[self facebook]];
     [_mainCaxirola addSubview:[self twitter]];
-
 }
 
 -(BOOL)prefersStatusBarHidden{
     return YES;
 }
+
 -(void)openChengeFlag
 {
             [[UIApplication sharedApplication]setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
