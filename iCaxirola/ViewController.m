@@ -12,11 +12,6 @@
 #import "GADBannerView.h"
 #import "Params.h"
 
-typedef enum : NSUInteger {
-    brz = 0,
-    cmr,
-} asd;
-
 @interface ViewController ()
 {
     AVAudioPlayer *SoundAudio0;
@@ -159,7 +154,7 @@ typedef enum : NSUInteger {
                 [Name setFont:[UIFont fontWithName:@"ArialRoundedMTBold" size:15]];
                 Name.adjustsFontSizeToFitWidth = YES;
                 [scrollView addSubview:Name];
-                
+
                 x = x + 1;
             }
             
@@ -174,17 +169,18 @@ typedef enum : NSUInteger {
             
             pressCloseFLW = [[UIButton alloc]initWithFrame:CGRectMake(517, 35, 45, 45)];
             [pressCloseFLW setBackgroundImage:[UIImage imageNamed:@"btn_plus@2x.png"] forState:UIControlStateNormal];
-            [pressCloseFLW addTarget:self action:@selector(removee) forControlEvents:UIControlEventTouchUpInside];
+            [pressCloseFLW addTarget:self action:@selector(closeFlagsList) forControlEvents:UIControlEventTouchUpInside];
             [adBaseView addSubview:pressCloseFLW];
 }
 
 -(void)pressFlagSelected:(UIButton*)flagButton{
+//  change the mainCaxirola
     NSString *flagButtonTag = [NSString stringWithFormat:@"%d", flagButton.tag];
     NSDictionary *flagDict = [NSDictionary dictionaryWithObjects:mainImages forKeys:flagKeys];
     NSString *flagImageName = [flagDict objectForKey:flagButtonTag];
     _mainCaxirola.image = [UIImage imageNamed:flagImageName];
     
-    //change the Flags backbround color
+//  change the Flags backbround color
     if ([flagButtonTag isEqualToString:@"0"]||
         [flagButtonTag isEqualToString:@"4"]) {
         _mainCaxirola.backgroundColor = RGB(255, 217, 64);
@@ -194,13 +190,14 @@ typedef enum : NSUInteger {
         _mainCaxirola.backgroundColor = RGB(235, 234, 230);
     }
     
-    
+//  delete selected icon
     for (UIView *view in scrollView.subviews) {
         if ([view isMemberOfClass:([UIImageView class])]) {
             [view removeFromSuperview];
         }
     }
     
+//  add selected icon
     InitialValue = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"selected.png"]];
     InitialValue.frame = CGRectMake(flagButton.frame.origin.x, flagButton.frame.origin.y, 30, 30);
     [scrollView addSubview:InitialValue];
@@ -216,13 +213,12 @@ typedef enum : NSUInteger {
     [ud setObject:str forKey:@"wefff"];
     [ud synchronize];
     
-    //    Save the coordinates of the select button
     _ud1 = [NSUserDefaults standardUserDefaults];
     [_ud1 setInteger:flagButton.tag forKey:@"tag"];
     [_ud1 synchronize];
 }
 
--(void)removee{
+-(void)closeFlagsList{
     flagsListWindow.alpha = 0.9;
     pressCloseFLW.alpha = 0.9;
     flagsListWindow.backgroundColor = RGB(50, 50, 49);
