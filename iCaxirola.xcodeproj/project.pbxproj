@@ -58,7 +58,6 @@
 		27573D21192DB8530035AA06 /* 3_col@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27573D15192DB8530035AA06 /* 3_col@2x.png */; };
 		27573D22192DB8530035AA06 /* 3_gre@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27573D16192DB8530035AA06 /* 3_gre@2x.png */; };
 		27573D23192DB8530035AA06 /* 3_jpn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27573D17192DB8530035AA06 /* 3_jpn@2x.png */; };
-		27573D25192DBA410035AA06 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 27573D24192DBA410035AA06 /* close.png */; };
 		27573D3A193162A60035AA06 /* m4_costarica@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27573D26193162A60035AA06 /* m4_costarica@2x.png */; };
 		27573D3B193162A60035AA06 /* m5_ecuador@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27573D27193162A60035AA06 /* m5_ecuador@2x.png */; };
 		27573D3C193162A60035AA06 /* m5_el_salvador@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27573D28193162A60035AA06 /* m5_el_salvador@2x.png */; };
@@ -210,7 +209,6 @@
 		27573D15192DB8530035AA06 /* 3_col@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3_col@2x.png"; sourceTree = "<group>"; };
 		27573D16192DB8530035AA06 /* 3_gre@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3_gre@2x.png"; sourceTree = "<group>"; };
 		27573D17192DB8530035AA06 /* 3_jpn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3_jpn@2x.png"; sourceTree = "<group>"; };
-		27573D24192DBA410035AA06 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		27573D26193162A60035AA06 /* m4_costarica@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "m4_costarica@2x.png"; sourceTree = "<group>"; };
 		27573D27193162A60035AA06 /* m5_ecuador@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "m5_ecuador@2x.png"; sourceTree = "<group>"; };
 		27573D28193162A60035AA06 /* m5_el_salvador@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "m5_el_salvador@2x.png"; sourceTree = "<group>"; };
@@ -376,7 +374,6 @@
 				27F7126318BC928700A4394C /* maracas0.wav */,
 				27F7126418BC928700A4394C /* maracas1.wav */,
 				275F4790193CBF2000F6B2A6 /* hue.wav */,
-				27573D24192DBA410035AA06 /* close.png */,
 				27E78C8C18B8A7D500FD3984 /* selected.png */,
 				27500AC118AB87E600703749 /* Images.xcassets */,
 				27500AB018AB87E600703749 /* Supporting Files */,
@@ -707,7 +704,6 @@
 				276BD50F18CB84CA0035A90F /* Icon-60.png in Resources */,
 				27573D6B1931658D0035AA06 /* 6_nga@2x.png in Resources */,
 				27573D02192B14A10035AA06 /* m3_greece@2x.png in Resources */,
-				27573D25192DBA410035AA06 /* close.png in Resources */,
 				27F7129618BE30F200A4394C /* WebView.xib in Resources */,
 				27573D46193162A60035AA06 /* m7_por@2x.png in Resources */,
 				27573D3E193162A60035AA06 /* m5_sui@2x.png in Resources */,

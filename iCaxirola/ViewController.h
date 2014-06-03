@@ -11,7 +11,6 @@
 #import <QuartzCore/QuartzCore.h>
 #import "Params.h"
 #import "GADBannerView.h"
-#import "UIView+iCaxirola.h"
 #import <AVFoundation/AVAudioPlayer.h>
 
 @interface ViewController : UIViewController

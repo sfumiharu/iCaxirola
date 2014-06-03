@@ -6,7 +6,6 @@
 //  Copyright (c) 2014年 FumiharuSugawara. All rights reserved.
 //
 #import "ViewController.h"
-#import "UIView+iCaxirola.h"
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import "GADBannerView.h"
@@ -34,8 +33,8 @@
     UIImageView *menu;
     UIImageView *facebook;
     UIImageView *twitter;
+    UIImageView *mainCaxirola;
 }
-@property (nonatomic, strong) IBOutlet UIImageView *mainCaxirola;
 @property (nonatomic, strong) NSUserDefaults *ud1;
 @property (strong, nonatomic) IBOutlet UIWebView *WebView;
 @property (strong, nonatomic) UIImageView *menuu;
@@ -48,13 +47,22 @@
     [super viewDidLoad];
     [UIApplication sharedApplication].statusBarHidden = YES;
     
-    _mainCaxirola.image = [UIImage imageNamed:@"m1_brazil@2x.png"];
-    _mainCaxirola.backgroundColor = RGB(255, 217, 64);
+    CGRect mainCaxirolaRect = [[UIScreen mainScreen]bounds];
+    if (mainCaxirolaRect.size.height == 480) {
+        mainCaxirola = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 480, 320)];
+    }else{
+        mainCaxirola = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 568, 320)];
+    }
     
-    [_mainCaxirola addSubview:[self plus]];
-    [_mainCaxirola addSubview:[self menu]];
-    [_mainCaxirola addSubview:[self facebook]];
-    [_mainCaxirola addSubview:[self twitter]];
+    mainCaxirola.image = [UIImage imageNamed:@"m1_brazil@2x.png"];
+    mainCaxirola.backgroundColor = RGB(255, 217, 64);
+    mainCaxirola.userInteractionEnabled = YES;
+    
+    [self.view addSubview:mainCaxirola];
+    [mainCaxirola addSubview:[self plus]];
+    [mainCaxirola addSubview:[self menu]];
+    [mainCaxirola addSubview:[self facebook]];
+    [mainCaxirola addSubview:[self twitter]];
 }
 
 -(BOOL)prefersStatusBarHidden{
@@ -166,8 +174,13 @@
             [title setTextAlignment:NSTextAlignmentCenter];
             [title setFont:[UIFont fontWithName:@"ArialRoundedMTBold" size:20]];
             [adBaseView addSubview:title];
-            
-            pressCloseFLW = [[UIButton alloc]initWithFrame:CGRectMake(517, 35, 45, 45)];
+    
+    CGRect r = [[UIScreen mainScreen] bounds];
+    if(r.size.height == 480){
+        pressCloseFLW = [[UIButton alloc]initWithFrame:CGRectMake(440, 35, 45, 45)];
+    }else{
+        pressCloseFLW = [[UIButton alloc]initWithFrame:CGRectMake(517, 35, 45, 45)];
+    }
             [pressCloseFLW setBackgroundImage:[UIImage imageNamed:@"btn_plus@2x.png"] forState:UIControlStateNormal];
             [pressCloseFLW addTarget:self action:@selector(closeFlagsList) forControlEvents:UIControlEventTouchUpInside];
             [adBaseView addSubview:pressCloseFLW];
@@ -178,16 +191,16 @@
     NSString *flagButtonTag = [NSString stringWithFormat:@"%d", flagButton.tag];
     NSDictionary *flagDict = [NSDictionary dictionaryWithObjects:mainImages forKeys:flagKeys];
     NSString *flagImageName = [flagDict objectForKey:flagButtonTag];
-    _mainCaxirola.image = [UIImage imageNamed:flagImageName];
+    mainCaxirola.image = [UIImage imageNamed:flagImageName];
     
 //  change the Flags backbround color
     if ([flagButtonTag isEqualToString:@"0"]||
         [flagButtonTag isEqualToString:@"4"]) {
-        _mainCaxirola.backgroundColor = RGB(255, 217, 64);
+        mainCaxirola.backgroundColor = RGB(255, 217, 64);
     }else if ([flagButtonTag isEqualToString:@"11"]){
-        _mainCaxirola.backgroundColor = RGB(225, 224, 221);
+        mainCaxirola.backgroundColor = RGB(225, 224, 221);
     }else{
-        _mainCaxirola.backgroundColor = RGB(235, 234, 230);
+        mainCaxirola.backgroundColor = RGB(235, 234, 230);
     }
     
 //  delete selected icon
@@ -261,48 +274,24 @@
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    [self setAudio00];
-    [SoundAudio0 play];
-    [self setAudio01];
-    [SoundAudio2 play];
-    [self setAudio10];
-    [SoundAudio1 play];
-    [self setAudio11];
-    [SoundAudio3 play];
+    [self audioSetAndPlay];
 }
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [self setAudio00];
-    [SoundAudio0 play];
-    [self setAudio01];
-    [SoundAudio2 play];
-    [self setAudio10];
-    [SoundAudio1 play];
-    [self setAudio11];
-    [SoundAudio3 play];
+    [self audioSetAndPlay];
 }
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
-    [self setAudio00];
-    [SoundAudio0 play];
-    [self setAudio01];
-    [SoundAudio2 play];
-    [self setAudio10];
-    [SoundAudio1 play];
-    [self setAudio11];
-    [SoundAudio3 play];
+    [self audioSetAndPlay];
 }
 -(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
-    [self setAudio00];
-    [SoundAudio0 play];
-    [self setAudio01];
-    [SoundAudio2 play];
-    [self setAudio10];
-    [SoundAudio1 play];
-    [self setAudio11];
-    [SoundAudio3 play];
+    [self audioSetAndPlay];
 }
 -(void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    [self audioSetAndPlay];
+}
+
+-(void)audioSetAndPlay{
     [self setAudio00];
     [SoundAudio0 play];
     [self setAudio01];
@@ -367,7 +356,12 @@
 }
 
 -(UIImageView *)facebook{
-    facebook = [[UIImageView alloc]initWithFrame:CGRectMake(self.mainCaxirola.frame.size.width/1.188, self.mainCaxirola.frame.size.height/2.25, 90, 90)];
+    CGRect r = [[UIScreen mainScreen] bounds];
+    if(r.size.height == 480){
+    facebook = [[UIImageView alloc]initWithFrame:CGRectMake(mainCaxirola.frame.size.width/1.23, mainCaxirola.frame.size.height/2.25, 90, 90)];
+    }else{
+    facebook = [[UIImageView alloc]initWithFrame:CGRectMake(mainCaxirola.frame.size.width/1.188, mainCaxirola.frame.size.height/2.25, 90, 90)];
+    }
     [facebook setImage:[UIImage imageNamed:@"btn_facebook@2x.png"]];
     facebook.alpha = 0;
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(fb)];
@@ -377,7 +371,12 @@
 }
 
 -(UIImageView *)twitter{
-    twitter = [[UIImageView alloc]initWithFrame:CGRectMake(self.mainCaxirola.frame.size.width/1.45, self.mainCaxirola.frame.size.height/2.25, 90, 90)];
+    CGRect r = [[UIScreen mainScreen] bounds];
+    if(r.size.height == 480){
+    twitter = [[UIImageView alloc]initWithFrame:CGRectMake(mainCaxirola.frame.size.width/1.6, mainCaxirola.frame.size.height/2.25, 90, 90)];
+    }else{
+    twitter = [[UIImageView alloc]initWithFrame:CGRectMake(mainCaxirola.frame.size.width/1.45, mainCaxirola.frame.size.height/2.25, 90, 90)];
+    }
     [twitter setImage:[UIImage imageNamed:@"btn_twitter@2x.png"]];
     twitter.alpha = 0;
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tw)];
@@ -387,7 +386,12 @@
 }
 
 -(UIImageView *)plus{
-    plus = [[UIImageView alloc]initWithFrame:CGRectMake(self.mainCaxirola.frame.size.width/1.188, self.mainCaxirola.frame.size.height/1.38, 90, 90)];
+    CGRect r = [[UIScreen mainScreen] bounds];
+    if(r.size.height == 480){
+        plus = [[UIImageView alloc]initWithFrame:CGRectMake(mainCaxirola.frame.size.width/1.23, mainCaxirola.frame.size.height/1.38, 90, 90)];
+    }else{
+        plus = [[UIImageView alloc]initWithFrame:CGRectMake(mainCaxirola.frame.size.width/1.18, mainCaxirola.frame.size.height/1.38, 90, 90)];
+    }
     [plus setImage:[UIImage imageNamed:@"btn_plus@2x.png"]];
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(openMenuButtonFadeIn)];
     [plus addGestureRecognizer:tapGesture];
@@ -396,7 +400,13 @@
 }
 
 -(UIImageView *)menu{
-    menu = [[UIImageView alloc]initWithFrame:CGRectMake(self.mainCaxirola.frame.size.width/1.45, self.mainCaxirola.frame.size.height/1.38, 90, 90)];
+    
+    CGRect r = [[UIScreen mainScreen] bounds];
+    if(r.size.height == 480){
+        menu = [[UIImageView alloc]initWithFrame:CGRectMake(mainCaxirola.frame.size.width/1.6, mainCaxirola.frame.size.height/1.38, 90, 90)];
+    }else{
+        menu = [[UIImageView alloc]initWithFrame:CGRectMake(mainCaxirola.frame.size.width/1.45, mainCaxirola.frame.size.height/1.38, 90, 90)];
+    }
     [menu setImage:[UIImage imageNamed:@"btn_menu@2x.png"]];
     menu.alpha = 0;
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(openChengeFlag)];
