@@ -356,8 +356,7 @@
 }
 
 -(UIImageView *)facebook{
-    CGRect r = [[UIScreen mainScreen] bounds];
-    if(r.size.height == 480){
+    if([self is35inch]){
     facebook = [[UIImageView alloc]initWithFrame:CGRectMake(mainCaxirola.frame.size.width/1.23, mainCaxirola.frame.size.height/2.25, 90, 90)];
     }else{
     facebook = [[UIImageView alloc]initWithFrame:CGRectMake(mainCaxirola.frame.size.width/1.188, mainCaxirola.frame.size.height/2.25, 90, 90)];
@@ -371,8 +370,7 @@
 }
 
 -(UIImageView *)twitter{
-    CGRect r = [[UIScreen mainScreen] bounds];
-    if(r.size.height == 480){
+    if([self is35inch]){
     twitter = [[UIImageView alloc]initWithFrame:CGRectMake(mainCaxirola.frame.size.width/1.6, mainCaxirola.frame.size.height/2.25, 90, 90)];
     }else{
     twitter = [[UIImageView alloc]initWithFrame:CGRectMake(mainCaxirola.frame.size.width/1.45, mainCaxirola.frame.size.height/2.25, 90, 90)];
@@ -386,8 +384,7 @@
 }
 
 -(UIImageView *)plus{
-    CGRect r = [[UIScreen mainScreen] bounds];
-    if(r.size.height == 480){
+    if([self is35inch]){
         plus = [[UIImageView alloc]initWithFrame:CGRectMake(mainCaxirola.frame.size.width/1.23, mainCaxirola.frame.size.height/1.38, 90, 90)];
     }else{
         plus = [[UIImageView alloc]initWithFrame:CGRectMake(mainCaxirola.frame.size.width/1.18, mainCaxirola.frame.size.height/1.38, 90, 90)];
@@ -400,9 +397,7 @@
 }
 
 -(UIImageView *)menu{
-    
-    CGRect r = [[UIScreen mainScreen] bounds];
-    if(r.size.height == 480){
+    if([self is35inch]){
         menu = [[UIImageView alloc]initWithFrame:CGRectMake(mainCaxirola.frame.size.width/1.6, mainCaxirola.frame.size.height/1.38, 90, 90)];
     }else{
         menu = [[UIImageView alloc]initWithFrame:CGRectMake(mainCaxirola.frame.size.width/1.45, mainCaxirola.frame.size.height/1.38, 90, 90)];
@@ -413,6 +408,11 @@
     [menu addGestureRecognizer:tapGesture];
     menu.userInteractionEnabled = YES;
     return menu;
+}
+
+-(BOOL)is35inch{
+    CGRect r = [[UIScreen mainScreen] bounds];
+    return r.size.height == 480;
 }
 
 - (UIView*)AdMobBanner{
