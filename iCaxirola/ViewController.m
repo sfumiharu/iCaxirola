@@ -111,7 +111,7 @@
                           kESP, kNED, kCHI, kAUS,
                           kCOL, kGRE, kCIV, kJPN,
                           kURU, kCRC, kENG, kITA,
-                          kSUI, kECU, kFRA,
+                          kSUI, kECU, kFRA, kHON,
                           kARG, kBIH, kIRN, kNGA,
                           kGRE, kPOR, kGHA, kUSA,
                           kBEL, kALG, kRUS, kKOR, nil];
@@ -119,7 +119,7 @@
                           k_ESP, k_NED, k_CHI, k_AUS,
                           k_COL, k_GRE, k_CIV, k_JPN,
                           k_URU, k_CRC, k_ENG, k_ITA,
-                          k_SUI, k_ECU, k_FRA,
+                          k_SUI, k_ECU, k_FRA, k_HON,
                           k_ARG, k_BIH, k_IRN, k_NGA,
                           k_GRE, k_POR, k_GHA, k_USA,
                           k_BEL, k_ALG, k_RUS, k_KOR, nil];
@@ -127,11 +127,11 @@
                          kE_ESP, kE_NED, kE_CHI, kE_AUS,
                          kE_COL, kE_GRE, kE_CIV, kE_JPN,
                          kE_URU, kE_CRC, kE_ENG, kE_ITA,
-                         kE_SUI, kE_ECU, kE_FRA,
+                         kE_SUI, kE_ECU, kE_FRA, kE_HON,
                          kE_ARG, kE_BIH, kE_IRN, kE_NGA,
                          kE_GRE, kE_POR, kE_GHA, kE_USA,
                          kE_BEL, kE_ALG, kE_RUS, kE_KOR, nil];
-            flagKeys = [NSArray arrayWithObjects:@"0", @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11", @"12", @"13", @"14", @"15", @"16", @"17", @"19", @"20", @"21", @"22", @"23", @"24", @"25", @"26", @"27", @"28", @"29", @"30", @"31", nil];
+            flagKeys = [NSArray arrayWithObjects:@"0", @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11", @"12", @"13", @"14", @"15", @"16", @"17", @"18", @"19", @"20", @"21", @"22", @"23", @"24", @"25", @"26", @"27", @"28", @"29", @"30", @"31", nil];
             
             
             //    ボタンの配置

@@ -106,6 +106,13 @@
 		275F478C193C7EB900F6B2A6 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 275F4784193C7EB900F6B2A6 /* icon.png */; };
 		275F478D193C7EB900F6B2A6 /* splashscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 275F4785193C7EB900F6B2A6 /* splashscreen.png */; };
 		275F4791193CBF2000F6B2A6 /* hue.wav in Resources */ = {isa = PBXBuildFile; fileRef = 275F4790193CBF2000F6B2A6 /* hue.wav */; };
+		27633C601946E8BE00F8293D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27633C5F1946E8BE00F8293D /* Security.framework */; };
+		27633C621946ED0800F8293D /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27633C611946ED0800F8293D /* iAd.framework */; };
+		27633CB21946EF3600F8293D /* libNendAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27633CAC1946EF3600F8293D /* libNendAd.a */; };
+		27633CB31946EF3600F8293D /* NADView_readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 27633CB11946EF3600F8293D /* NADView_readme.txt */; };
+		27633CB61946EFA900F8293D /* libAdapterNend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27633CB41946EF6300F8293D /* libAdapterNend.a */; };
+		27633CC3194718A400F8293D /* m5_honduras@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27633CC2194718A400F8293D /* m5_honduras@2x.png */; };
+		27633CC5194718B400F8293D /* 5_hon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27633CC4194718B400F8293D /* 5_hon@2x.png */; };
 		276BD50B18CB84380035A90F /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 276BD50818CB84380035A90F /* Icon-60@2x.png */; };
 		276BD50C18CB84380035A90F /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 276BD50918CB84380035A90F /* Icon-Small.png */; };
 		276BD50D18CB84380035A90F /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 276BD50A18CB84380035A90F /* Icon-Small@2x.png */; };
@@ -257,6 +264,23 @@
 		275F4784193C7EB900F6B2A6 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		275F4785193C7EB900F6B2A6 /* splashscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashscreen.png; sourceTree = "<group>"; };
 		275F4790193CBF2000F6B2A6 /* hue.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hue.wav; sourceTree = "<group>"; };
+		27633C5F1946E8BE00F8293D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		27633C611946ED0800F8293D /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		27633CAC1946EF3600F8293D /* libNendAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNendAd.a; sourceTree = "<group>"; };
+		27633CAD1946EF3600F8293D /* NADIconArrayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADIconArrayView.h; sourceTree = "<group>"; };
+		27633CAE1946EF3600F8293D /* NADIconLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADIconLoader.h; sourceTree = "<group>"; };
+		27633CAF1946EF3600F8293D /* NADIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADIconView.h; sourceTree = "<group>"; };
+		27633CB01946EF3600F8293D /* NADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADView.h; sourceTree = "<group>"; };
+		27633CB11946EF3600F8293D /* NADView_readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NADView_readme.txt; sourceTree = "<group>"; };
+		27633CB41946EF6300F8293D /* libAdapterNend.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdapterNend.a; path = "../../Downloads/NendSDK_iOS-2.3.3/AdMobMediationAdapter/libAdapterNend.a"; sourceTree = "<group>"; };
+		27633CB81947145900F8293D /* GADCustomEventBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventBanner.h; sourceTree = "<group>"; };
+		27633CB91947145900F8293D /* GADCustomEventBannerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventBannerDelegate.h; sourceTree = "<group>"; };
+		27633CBA1947145900F8293D /* GADCustomEventExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventExtras.h; sourceTree = "<group>"; };
+		27633CBB1947145900F8293D /* GADCustomEventInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventInterstitial.h; sourceTree = "<group>"; };
+		27633CBC1947145900F8293D /* GADCustomEventInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventInterstitialDelegate.h; sourceTree = "<group>"; };
+		27633CBD1947145900F8293D /* GADCustomEventRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventRequest.h; sourceTree = "<group>"; };
+		27633CC2194718A400F8293D /* m5_honduras@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "m5_honduras@2x.png"; sourceTree = "<group>"; };
+		27633CC4194718B400F8293D /* 5_hon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5_hon@2x.png"; sourceTree = "<group>"; };
 		276BD50818CB84380035A90F /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		276BD50918CB84380035A90F /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		276BD50A18CB84380035A90F /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
@@ -290,6 +314,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27633CB61946EFA900F8293D /* libAdapterNend.a in Frameworks */,
+				27633C621946ED0800F8293D /* iAd.framework in Frameworks */,
+				27633C601946E8BE00F8293D /* Security.framework in Frameworks */,
 				27F7129418BE0DB400A4394C /* Social.framework in Frameworks */,
 				27F7129218BDA78400A4394C /* QuartzCore.framework in Frameworks */,
 				27500B1F18ABA60400703749 /* SystemConfiguration.framework in Frameworks */,
@@ -299,6 +326,7 @@
 				27500AAC18AB87E600703749 /* CoreGraphics.framework in Frameworks */,
 				27500B1718ABA5D300703749 /* AdSupport.framework in Frameworks */,
 				27500AE118AB891500703749 /* AVFoundation.framework in Frameworks */,
+				27633CB21946EF3600F8293D /* libNendAd.a in Frameworks */,
 				27500ADF18AB890F00703749 /* AudioToolbox.framework in Frameworks */,
 				27500AAE18AB87E600703749 /* UIKit.framework in Frameworks */,
 				27500AAA18AB87E600703749 /* Foundation.framework in Frameworks */,
@@ -341,6 +369,11 @@
 		27500AA818AB87E600703749 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				27633CB41946EF6300F8293D /* libAdapterNend.a */,
+				27633CAB1946EF3600F8293D /* NendAd */,
+				27500B1518ABA5A200703749 /* AdMob */,
+				27633C611946ED0800F8293D /* iAd.framework */,
+				27633C5F1946E8BE00F8293D /* Security.framework */,
 				27F7129318BE0DB400A4394C /* Social.framework */,
 				27F7129118BDA78400A4394C /* QuartzCore.framework */,
 				27500B1E18ABA60400703749 /* SystemConfiguration.framework */,
@@ -348,7 +381,6 @@
 				27500B1A18ABA5EE00703749 /* MessageUI.framework */,
 				27500B1818ABA5E400703749 /* CoreTelephony.framework */,
 				27500B1618ABA5D300703749 /* AdSupport.framework */,
-				27500B1518ABA5A200703749 /* AdMob */,
 				27500AE018AB891500703749 /* AVFoundation.framework */,
 				27500ADE18AB890F00703749 /* AudioToolbox.framework */,
 				27500AA918AB87E600703749 /* Foundation.framework */,
@@ -436,6 +468,7 @@
 				27500B1018ABA58300703749 /* GADRequestError.h */,
 				27500B1118ABA58300703749 /* libGoogleAdMobAds.a */,
 				27500B1218ABA58300703749 /* README.txt */,
+				27633CB71947145900F8293D /* Mediation */,
 			);
 			name = AdMob;
 			sourceTree = "<group>";
@@ -448,6 +481,32 @@
 				27F7126718BC933E00A4394C /* flagsList */,
 			);
 			name = Flagsimages;
+			sourceTree = "<group>";
+		};
+		27633CAB1946EF3600F8293D /* NendAd */ = {
+			isa = PBXGroup;
+			children = (
+				27633CAC1946EF3600F8293D /* libNendAd.a */,
+				27633CAD1946EF3600F8293D /* NADIconArrayView.h */,
+				27633CAE1946EF3600F8293D /* NADIconLoader.h */,
+				27633CAF1946EF3600F8293D /* NADIconView.h */,
+				27633CB01946EF3600F8293D /* NADView.h */,
+				27633CB11946EF3600F8293D /* NADView_readme.txt */,
+			);
+			path = NendAd;
+			sourceTree = "<group>";
+		};
+		27633CB71947145900F8293D /* Mediation */ = {
+			isa = PBXGroup;
+			children = (
+				27633CB81947145900F8293D /* GADCustomEventBanner.h */,
+				27633CB91947145900F8293D /* GADCustomEventBannerDelegate.h */,
+				27633CBA1947145900F8293D /* GADCustomEventExtras.h */,
+				27633CBB1947145900F8293D /* GADCustomEventInterstitial.h */,
+				27633CBC1947145900F8293D /* GADCustomEventInterstitialDelegate.h */,
+				27633CBD1947145900F8293D /* GADCustomEventRequest.h */,
+			);
+			path = Mediation;
 			sourceTree = "<group>";
 		};
 		27F7126718BC933E00A4394C /* flagsList */ = {
@@ -472,6 +531,7 @@
 				27573D521931658D0035AA06 /* 5_ecu@2x.png */,
 				27573D531931658D0035AA06 /* 5_fra@2x.png */,
 				27573D541931658D0035AA06 /* 5_sui@2x.png */,
+				27633CC4194718B400F8293D /* 5_hon@2x.png */,
 				27573D551931658D0035AA06 /* 6_arg@2x.png */,
 				27573D561931658D0035AA06 /* 6_bhi@2x.png */,
 				27573D571931658D0035AA06 /* 6_irn@2x.png */,
@@ -496,6 +556,7 @@
 				27573D28193162A60035AA06 /* m5_el_salvador@2x.png */,
 				27573D29193162A60035AA06 /* m5_fra@2x.png */,
 				27573D2A193162A60035AA06 /* m5_sui@2x.png */,
+				27633CC2194718A400F8293D /* m5_honduras@2x.png */,
 				27573D2B193162A60035AA06 /* m6_bhi@2x.png */,
 				27573D2C193162A60035AA06 /* m6_argentina@2x.png */,
 				27573D2D193162A60035AA06 /* m6_iran@2x.png */,
@@ -641,6 +702,7 @@
 				27573D43193162A60035AA06 /* m6_nigeria@2x.png in Resources */,
 				27573D3A193162A60035AA06 /* m4_costarica@2x.png in Resources */,
 				27573D4A193162A60035AA06 /* m8_russia@2x.png in Resources */,
+				27633CB31946EF3600F8293D /* NADView_readme.txt in Resources */,
 				27573D641931658D0035AA06 /* 4_uru@2x.png in Resources */,
 				27573D6E1931658D0035AA06 /* 7_por@2x.png in Resources */,
 				27573D661931658D0035AA06 /* 5_fra@2x.png in Resources */,
@@ -709,6 +771,7 @@
 				27573D3E193162A60035AA06 /* m5_sui@2x.png in Resources */,
 				276BD50C18CB84380035A90F /* Icon-Small.png in Resources */,
 				27573D08192B17CE0035AA06 /* btn_facebook@2x.png in Resources */,
+				27633CC3194718A400F8293D /* m5_honduras@2x.png in Resources */,
 				27573D47193162A60035AA06 /* m8_argeria@2x.png in Resources */,
 				275F4791193CBF2000F6B2A6 /* hue.wav in Resources */,
 				27573CFE192B14A10035AA06 /* m2_espagne@2x.png in Resources */,
@@ -732,6 +795,7 @@
 				27573CFB192B14A10035AA06 /* m1_mexico@2x.png in Resources */,
 				27573D20192DB8530035AA06 /* 3_civ@2x.png in Resources */,
 				27573D3B193162A60035AA06 /* m5_ecuador@2x.png in Resources */,
+				27633CC5194718B400F8293D /* 5_hon@2x.png in Resources */,
 				27573D0A192B17CE0035AA06 /* btn_plus@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -887,6 +951,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/fumiharu/Downloads/iCaxirola_m/iCaxirola,
+					"/Users/fumiharu/Desktop/iCaxirola/NendSDK_iOS-2.3.3/AdMobMediationAdapter",
+					"/Users/fumiharu/Desktop/iCaxirola/NendSDK_iOS-2.3.3/Nend/NendAd",
+					/Users/fumiharu/Desktop/iCaxirola/NendAd,
+					"/Users/fumiharu/Downloads/NendSDK_iOS-2.3.3/AdMobMediationAdapter",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -910,6 +978,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/fumiharu/Downloads/iCaxirola_m/iCaxirola,
+					"/Users/fumiharu/Desktop/iCaxirola/NendSDK_iOS-2.3.3/AdMobMediationAdapter",
+					"/Users/fumiharu/Desktop/iCaxirola/NendSDK_iOS-2.3.3/Nend/NendAd",
+					/Users/fumiharu/Desktop/iCaxirola/NendAd,
+					"/Users/fumiharu/Downloads/NendSDK_iOS-2.3.3/AdMobMediationAdapter",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

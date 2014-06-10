@@ -10,6 +10,7 @@
 
 #define kAdUnitID   @"ca-app-pub-4093245526421990/1515342265"
 
+//ca-app-pub-4093245526421990/1515342265
 //matches http://touch.fifa.com/worldcup/matches/index.html
 //groups http://touch.fifa.com/worldcup/standings/index.html
 //teams http://touch.fifa.com/worldcup/teams/index.html
@@ -75,7 +76,7 @@
 #define k_SUI	@"m5_sui@2x.png"
 #define k_ECU	@"m5_ecuador@2x.png"
 #define k_FRA	@"m5_fra@2x.png"
-#define k_HON	@"m5_el_salvador@2x.png"
+#define k_HON	@"m5_honduras@2x.png"
 #define k_ARG	@"m6_argentina@2x.png"
 #define k_BIH	@"m6_bhi@2x.png"
 #define k_IRN	@"m6_iran@2x.png"
